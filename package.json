@@ -1,0 +1,29 @@
+{
+  "name": "streetsweeper",
+  "description": "Clean up street address data",
+  "author": "Casey Thomas <info@caseypthomas.org>",
+  "version": "0.0.0",
+  "main": "./street-sweeper",
+  "preferGlobal": "true",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/caseypt/streetsweeper.js.git"
+  },
+  "dependencies": {
+    "optimist": "0.3",
+    "csv": "0.3.x"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "expect.js": "*"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "bin": {
+    "streetsweeper": "./bin/streetsweeper"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
