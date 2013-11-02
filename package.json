@@ -2,7 +2,7 @@
   "name": "streetsweeper",
   "description": "Clean up street address data",
   "author": "Casey Thomas <info@caseypthomas.org>",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "./street-sweeper",
   "preferGlobal": "true",
   "repository": {

@@ -49,15 +49,18 @@ describe('streetsweeper', function() {
 
     it('converts street types to their abbreviated form', function() {
       expect(streetsweeper.sweep('123 main street')).to.eql('123 MAIN ST');
-      expect(streetsweeper.sweep('123 main boulevard')).to.eql('123 MAIN BLV');
+      expect(streetsweeper.sweep('123 main boulevard')).to.eql('123 MAIN BLVD');
       expect(streetsweeper.sweep('123 main avenue')).to.eql('123 MAIN AVE');
     })
 
     it('removes characters from house numbers, except for s (subterranean) and r (rear)', function() {
       expect(streetsweeper.sweep('123r main street')).to.eql('123R MAIN ST');
       expect(streetsweeper.sweep('123s main street')).to.eql('123S MAIN ST');
-      expect(streetsweeper.sweep('123a main street')).to.eql('123a MAIN ST');
-      expect(streetsweeper.sweep('123Z main street')).to.eql('123z MAIN ST');
+      expect(streetsweeper.sweep('123a main street')).to.eql('123 MAIN ST');
+      expect(streetsweeper.sweep('123Z main street')).to.eql('123 MAIN ST');
+      expect(streetsweeper.sweep('12Z main street')).to.eql('12 MAIN ST');
+      expect(streetsweeper.sweep('1Z main street')).to.eql('1 MAIN ST');
+      expect(streetsweeper.sweep('1R main street')).to.eql('1R MAIN ST');
     });
   });
 
