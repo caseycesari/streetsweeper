@@ -13,7 +13,9 @@ Clean up street address data.
 
 ## Installation
 
-For node, use npm: `$ npm install street-sweeper`
+For Node.js, and to use the `streetsweeper` command line tool, use npm: `$ npm install -g street-sweeper`.
+
+In the browser, include `streetsweeper.min.js`.
 
 ## Getting Started
 
