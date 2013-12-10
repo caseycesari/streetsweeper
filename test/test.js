@@ -105,7 +105,7 @@ describe('streetsweeper', function() {
       expect(streetsweeper.sweep('123 main street', expandOptions)).to.eql('123 Main Street');
       expect(streetsweeper.sweep('123 main blvd', expandOptions)).to.eql('123 Main Boulevard');
       expect(streetsweeper.sweep('123 main ave', expandOptions)).to.eql('123 Main Avenue');
-    })
+    });
 
     // Test street direction functions
     it('converts street directions to their abbreviated form', function() {

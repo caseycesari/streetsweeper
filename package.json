@@ -1,8 +1,8 @@
 {
   "name": "streetsweeper",
   "description": "Clean up street address data",
-  "author": "Casey Thomas <info@caseypthomas.org>",
-  "version": "0.0.1",
+  "author": "Casey Thomas <caseypthomas@gmail.com>",
+  "version": "0.0.5",
   "main": "./street-sweeper",
   "preferGlobal": "true",
   "repository": {
@@ -16,11 +16,10 @@
   "devDependencies": {
     "mocha": "*",
     "expect.js": "*",
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.7.1",
-    "grunt-contrib-uglify": "~0.2.5",
-    "grunt-simple-mocha": "~0.4.0",
-    "grunt-mocha": "~0.4.1",
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-mocha": "~0.4.7",
     "grunt-lib-phantomjs": "~0.4.0"
   },
   "engines": {

@@ -6,23 +6,23 @@
   // Basic cleaning functions
   functions.removeExtraSpaces = function(address) {
     return address.replace(/ +/g, ' ');
-  }
+  };
 
   functions.removeCommas = function(address) {
     return address.replace(',','');
-  }
+  };
 
   functions.removeTrailingAndLeadingSpaces = function(address) {
     return address.trim();
-  }
+  };
 
   functions.removeHyphenSpaces = function(address) {
     return address.replace(/(\d) - (\d)/, '$1-$2');
-  }
+  };
 
   functions.removeLettersNextToNumber = function(address) {
     return address.replace(/(\d+)([A-Q,T-Z,a-q,t-z])/, '$1'); // that regex string isn't going to fly for long
-  }
+  };
 
   // Street direction functions
   functions.abbreviateStreetDirection = function(address) {
@@ -31,7 +31,7 @@
       'SOUTH': 'S',
       'EAST': 'E',
       'WEST': 'W'
-    }
+    };
 
     address = address.replace(/\bNORTH\b|\bSOUTH\b|\bEAST\b|\bWEST\b/gi, function(matched){
       matched = matched.toUpperCase();
@@ -39,7 +39,7 @@
     });
 
     return address;
-  }
+  };
 
   functions.expandStreetDirection = function(address) {
     var directionMap = {
@@ -47,7 +47,7 @@
       'S': 'SOUTH',
       'E': 'EAST',
       'W': 'WEST'
-    }
+    };
 
     address = address.replace(/\bN\b|\bS\b|\bE\b|\bW\b/gi, function(matched){
       matched = matched.toUpperCase();
@@ -55,7 +55,7 @@
     });
 
     return address;
-  }
+  };
 
   // Street type functions
   functions.abbreviateStreetType = function(address) {
@@ -65,7 +65,7 @@
       'BOULEVARD': 'BLVD',
       'PARKWAY': 'PKWY',
       'ROAD': 'RD'
-    }
+    };
 
     address = address.replace(/\bAVENUE\b|\bSTREET\b|\bBOULEVARD\b|\bPARKWAY\b|\bROAD\b/gi, function(matched){
       matched = matched.toUpperCase();
@@ -73,7 +73,7 @@
     });
 
     return address;
-  }
+  };
 
   functions.expandStreetType = function(address) {
     var suffixMap = {
@@ -82,7 +82,7 @@
       'BLVD': 'BOULEVARD',
       'PKWY': 'PARKWAY',
       'RD': 'ROAD'
-    }
+    };
 
     address = address.replace(/\bAVE\b|\bST\b|\bBLVD\b|\bPKWY\b|\bRD\b/gi, function(matched){
       matched = matched.toUpperCase();
@@ -90,16 +90,16 @@
     });
 
     return address;
-  }
+  };
 
   // Casing functions
   functions.toUpperCase = function(address) {
     return address.toUpperCase();
-  }
+  };
 
   functions.toLowerCase = function(address) {
     return address.toLowerCase();
-  }
+  };
 
   functions.toTitleCase = function(address) {
     // from http://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
@@ -107,7 +107,7 @@
     return address.replace(/\w\S*/g, function(txt){ 
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
-  }
+  };
 
   streetsweeper.functionMap = {
     direction: {
@@ -123,7 +123,7 @@
       lower: functions.toLowerCase,
       title: functions.toTitleCase,
     }
-  }
+  };
 
   functions.generateFunctionList = function(options) {
     // We always run addresses through these basic cleaning functions
@@ -144,7 +144,7 @@
     }
 
     return functionList;
-  }
+  };
 
   // The main (and one and only public) function. 
   streetsweeper.sweep = function(addresses, options, callback) {

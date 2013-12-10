@@ -4,16 +4,18 @@ Clean up street address data.
 
 ## Assumptions
 
-`streetsweeper` assumes you have a list of U.S. addresses that are generally readable. It doesn't parse the components of an address, nor does it verify that the addresses are real USPS, certified addresses. It only cleans them up (removes extra spaces) and standardizes their format according to a specified format.
+`streetsweeper` assumes you have a list of U.S. addresses that are generally readable. It doesn't parse the components of an address, nor does it verify that the addresses are real USPS, certified addresses. It only cleans them up (removes extra spaces) and standardizes their format according to user specified options.
 
 ## Use Cases
 
 - Joining two datasets by address. Note: Joining data by addresses is rarely a good idea (properties can have multiple addresses, addresses change, etc), but sometimes it's the only field you have to join two datasets.
-- Consistently formatting addresses for display on a map, graphic, etc.
+- Displaying addresses in a consistent format on a map, graphic, etc.
 
 ## Installation
 
-For Node.js, and to use the `streetsweeper` command line tool, use npm: `$ npm install -g street-sweeper`.
+For Node.js: `$ npm install street-sweeper`.
+
+To use the command line tool, use npm with the global flag: `$ npm install -g street-sweeper`
 
 In the browser, include `streetsweeper.min.js`.
 
@@ -36,4 +38,4 @@ For the browser, visit `test/test.html`.
 
 ## Building
 
-`$ grunt ` will run test.js, then lint and minify `street-sweeper.js`.
+`$ grunt` will run the tests, then lint and minify `streetsweeper.js` to produce `streetsweeper.min.js`.
